@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        /*
+           # = id
+           . = class
+           : = pseudo-class
+           :: pseudo-element
+           > = clildren
+           */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        a {
+            color: rgb(95, 2, 56);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:visited {
+            color: blue;
+        }
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+        a:active {
+            color: yellow;
+        }
+        a::after {
+            content: '[link]';
+            text-decoration: none;
+            font-weight: normal;
+            color: rgb(223, 15, 15);
+        }
+        .especial::after {
+            content: '[link de Busca]';
+            text-decoration: none;
+            font-weight: normal;
+            color: rgb(96, 245, 10);
+            background-color: rgb(255, 0, 179);
+        }
+        .especial {
+            background-color: rgba(238, 240, 127, 0.89);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="https://www.youtube.com/watch?v=CVnXmAtzMLw" target="_blank">Musica </a></li>
+        <li><a href="https://riovagas.com.br/" class="especial">Site vagas de emprego</a></li>
+        <li><a href="https://www.instagram.com/">Instagram</a></li>
+        <li><a href="https://www.yahoo.com.br/">Site de busca</a></li>
+    </ul>
+</body>
+</html>
